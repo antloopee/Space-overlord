@@ -41,7 +41,7 @@ export const botConfig = {
     owners: process.env.OWNER_IDS?.split(",") || [],
 
     // Default wait time between command uses (in seconds).
-    defaultCooldown: 3, 
+    defaultCooldown: 1, 
 
     // If true, old commands are removed before re-registering.
     deleteCommands: false,
@@ -72,10 +72,10 @@ export const botConfig = {
     applicationCooldown: 24, 
 
     // Auto-delete denied applications after this many days.
-    deleteDeniedAfter: 7, 
+    deleteDeniedAfter: 14, 
 
     // Auto-delete approved applications after this many days.
-    deleteApprovedAfter: 30, 
+    deleteApprovedAfter: 90, 
 
     // Role IDs allowed to manage applications.
     managerRoles: [], // Will be populated from environment or database
@@ -156,18 +156,18 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "space bucks",
       // Plural display name.
-      namePlural: "coins",
+      namePlural: "space bucks",
       // Currency symbol shown in balances.
-      symbol: "$",
+      symbol: "🚀💰",
     },
 
     // Starting balance for new users.
     startingBalance: 0,
 
     // Maximum bank amount before upgrades (if upgrades are used).
-    baseBankCapacity: 100000,
+    baseBankCapacity: 1000000,
 
     // Daily reward amount.
     dailyAmount: 100,
@@ -181,7 +181,7 @@ export const botConfig = {
     begMax: 50,
 
     // Chance to succeed when robbing (0.4 = 40%).
-    robSuccessRate: 0.4,
+    robSuccessRate: 0.5,
 
     // Jail time after failed rob (milliseconds).
     // 3600000 = 1 hour.
@@ -281,7 +281,7 @@ export const botConfig = {
     announcementChannel: null,
 
     // Timezone used to calculate birthday dates.
-    timezone: "UTC",
+    timezone: "GMT",
   },
 
   // =========================
@@ -303,7 +303,7 @@ export const botConfig = {
       defaultCriteria: "none",
 
       // Days used when `defaultCriteria` is `account_age`.
-      defaultAccountAgeDays: 7,
+      defaultAccountAgeDays: 2,
 
       // Member count threshold used when `defaultCriteria` is `server_size`.
       // Example: 1000 means auto-verify if server has fewer than 1000 members.

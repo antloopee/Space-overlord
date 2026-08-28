@@ -6,7 +6,7 @@ import { InteractionHelper } from '../../utils/interactionHelper.js';
 import { ModerationService } from '../../services/moderationService.js';
 import { handleInteractionError } from '../../utils/errorHandler.js';
 export default {
-    data: new SlashCommandBuilder()
+    data: new SlashCommandBuilder(/ban)
         .setName("ban")
         .setDescription("Ban a user from the server")
         .addUserOption((option) =>

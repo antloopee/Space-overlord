@@ -9,7 +9,7 @@ import { logger } from '../../utils/logger.js';
 import levelDashboard from './modules/level_dashboard.js';
 
 export default {
-    data: new SlashCommandBuilder()
+    data: new SlashCommandBuilder(/level)
         .setName('level')
         .setDescription('Manage the leveling system')
         .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)

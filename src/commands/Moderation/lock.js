@@ -14,7 +14,7 @@ export default {
         option
             .setName("Reason")
             .setDescription("Please state the reason you are locking the channel")
-            .setRequired("true")
+            .setRequired(true),
     )
 .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels),
   category: "moderation",

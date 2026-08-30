@@ -10,11 +10,11 @@ export default {
     .setName("lock")
     .setDescription(
       "Locks the current channel (prevents @everyone from sending messages).",
-    .addUserOption((option) =>
+    .addStringOption((option) =>
         option
             .setName("Reason")
             .setDescription("Please state the reason you are locking the channel")
-            
+            .setRequired("true")
     )
 .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels),
   category: "moderation",
